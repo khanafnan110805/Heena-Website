@@ -7,9 +7,9 @@ export const SITE_CONFIG = {
       "With over a decade of experience in mehndi artistry, Sara blends traditional South Asian techniques with contemporary design sensibilities. Every design is crafted with intention — a personal story told in henna.",
   },
   contact: {
-    whatsapp: "+919757462269",
-    instagram: "@hennabyartist",
-    instagramUrl: "https://instagram.com/hennabyartist",
+    whatsapp: "+918779350329",
+    instagram: "@mehndiby_.sara8",
+    instagramUrl: "https://www.instagram.com/mehndiby_.sara8",
     email: "hello@hennabyartist.com",
     serviceArea: "Mumbai, Maharashtra",
     serviceHours: "Mon–Sat: 10am–8pm · Sun: 11am–6pm",
