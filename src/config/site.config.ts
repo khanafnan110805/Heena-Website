@@ -9,8 +9,9 @@ export const SITE_CONFIG = {
   contact: {
     whatsapp: "+918779350329",
     instagram: "@mehndiby_.sara8",
-    instagramUrl: "https://www.instagram.com/mehndiby_.sara8",
-    email: "hello@hennabyartist.com",
+    instagramUrl:
+      "https://www.instagram.com/mehndiby_.sara8?igsh=azh4YnRneXl5NXRq",
+    email: "shaikhsara17488@gmail.com",
     serviceArea: "Mumbai, Maharashtra",
     serviceHours: "Mon–Sat: 10am–8pm · Sun: 11am–6pm",
   },
