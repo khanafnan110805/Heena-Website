@@ -1,0 +1,6 @@
+export { HeroSection } from './HeroSection'
+export { GalleryGrid } from './GalleryGrid'
+export { GalleryLightbox } from './GalleryLightbox'
+export { BookingForm } from './BookingForm'
+export { TestimonialCarousel } from './TestimonialCarousel'
+export { FAQAccordion } from './FAQAccordion'

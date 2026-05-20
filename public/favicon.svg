@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="4" fill="#0A0A0A"/>
+  <!-- Simplified paisley/leaf motif -->
+  <path d="M16 4 C10 4 7 9 8 14 C9 19 13 22 16 28 C19 22 23 19 24 14 C25 9 22 4 16 4 Z" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+  <circle cx="16" cy="13" r="2.5" stroke="#C9A84C" stroke-width="1" fill="none"/>
+  <path d="M16 10 L16 4" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+</svg>

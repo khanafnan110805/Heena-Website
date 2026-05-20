@@ -1,0 +1,120 @@
+/* Import order: @import must come before @tailwind directives */
+@import './theme.css';
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-primary);
+    color: var(--color-bg-base);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-elevated);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold-muted);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-primary);
+    outline-offset: 2px;
+  }
+
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px bg-gold-primary mx-auto my-6;
+  }
+
+  .gold-text {
+    @apply text-gold-champagne;
+  }
+
+  .card-base {
+    @apply bg-bg-card border border-border-dark rounded-lg overflow-hidden;
+  }
+
+  .masonry-grid {
+    columns: 1;
+    column-gap: 16px;
+  }
+
+  @screen md {
+    .masonry-grid {
+      columns: 2;
+    }
+  }
+
+  @screen lg {
+    .masonry-grid {
+      columns: 3;
+    }
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.40) 0%,
+      rgba(10, 10, 10, 0.60) 50%,
+      rgba(10, 10, 10, 0.85) 100%
+    );
+  }
+
+  .scroll-lock {
+    overflow: hidden;
+  }
+}
