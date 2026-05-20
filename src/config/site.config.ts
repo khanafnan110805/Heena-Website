@@ -38,8 +38,9 @@ export const SITE_CONFIG = {
       "Hi! I'm interested in your Signature Bridal package for my wedding. I'd love to discuss details.",
   },
   social: {
-    instagram: "https://instagram.com/hennabyartist",
-    facebook: "https://facebook.com/hennabyartist",
+    instagram:
+      "https://www.instagram.com/mehndiby_.sara8?igsh=azh4YnRneXl5NXRq",
+    facebook: "",
   },
   seo: {
     defaultTitle: "HENNA — Premium Mehndi Art · Bridal · Festive · Events",
