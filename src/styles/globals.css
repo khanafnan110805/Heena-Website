@@ -1,13 +1,15 @@
 /* Import order: @import must come before @tailwind directives */
-@import './theme.css';
-@import './animations.css';
+@import "./theme.css";
+@import "./animations.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -20,7 +22,7 @@
   body {
     background-color: var(--color-bg-base);
     color: var(--color-text-primary);
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: "DM Sans", system-ui, sans-serif;
     overflow-x: hidden;
   }
 
@@ -51,7 +53,9 @@
     outline-offset: 2px;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px;
   }
 }
@@ -78,25 +82,25 @@
   }
 
   .masonry-grid {
-    columns: 1;
-    column-gap: 16px;
+    column-count: 1;
+    column-gap: 1.5rem;
   }
 
-  @screen md {
+  @media (min-width: 768px) {
     .masonry-grid {
-      columns: 2;
+      column-count: 2;
     }
   }
 
-  @screen lg {
+  @media (min-width: 1024px) {
     .masonry-grid {
-      columns: 3;
+      column-count: 3;
     }
   }
 
   .masonry-item {
     break-inside: avoid;
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -108,8 +112,8 @@
   .bg-hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(10, 10, 10, 0.40) 0%,
-      rgba(10, 10, 10, 0.60) 50%,
+      rgba(10, 10, 10, 0.4) 0%,
+      rgba(10, 10, 10, 0.6) 50%,
       rgba(10, 10, 10, 0.85) 100%
     );
   }

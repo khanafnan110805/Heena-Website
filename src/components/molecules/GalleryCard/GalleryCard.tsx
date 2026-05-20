@@ -1,18 +1,18 @@
-import type { GalleryImage } from '../../../types/gallery.types'
-import { Badge } from '../../atoms/Badge'
+import type { GalleryImage } from "../../../types/gallery.types";
+import { Badge } from "../../atoms/Badge";
 
 interface GalleryCardProps {
-  image: GalleryImage
-  index: number
-  onClick: (index: number) => void
+  image: GalleryImage;
+  index: number;
+  onClick: (index: number) => void;
 }
 
 const categoryLabels: Record<string, string> = {
-  bridal: 'Bridal',
-  arabic: 'Arabic',
-  floral: 'Floral',
-  indian: 'Indian',
-}
+  bridal: "Bridal",
+  arabic: "Arabic",
+  floral: "Floral",
+  indian: "Indian",
+};
 
 export function GalleryCard({ image, index, onClick }: GalleryCardProps) {
   return (
@@ -25,15 +25,23 @@ export function GalleryCard({ image, index, onClick }: GalleryCardProps) {
       <img
         src={image.src}
         alt={image.alt}
-        className="w-full h-auto block"
-        loading={index < 6 ? 'eager' : 'lazy'}
-        decoding="async"
+        className={`
+    w-full object-cover block rounded-sm
+    ${
+      image.aspectRatio === "portrait"
+        ? "h-[520px]"
+        : image.aspectRatio === "landscape"
+          ? "h-[320px]"
+          : "h-[420px]"
+    }
+  `}
+        loading={index < 6 ? "eager" : "lazy"}
       />
 
       {/* Hover overlay */}
       <div
         className="gallery-card-overlay absolute inset-0 flex flex-col items-center justify-center gap-2"
-        style={{ background: 'var(--overlay-gallery)' }}
+        style={{ background: "var(--overlay-gallery)" }}
         aria-hidden="true"
       >
         <Badge variant="gold">{categoryLabels[image.category]}</Badge>
@@ -42,5 +50,5 @@ export function GalleryCard({ image, index, onClick }: GalleryCardProps) {
         </span>
       </div>
     </button>
-  )
+  );
 }

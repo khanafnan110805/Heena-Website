@@ -536,3 +536,30 @@ styles/ ──→ Tailwind tokens → every component
 types/ ──→ Enforced across data, hooks, and components
 
 Every WhatsApp CTA in the project traces back to a single message string — either in site.config.ts (for generic CTAs) or in the relevant data/\*.data.ts file (per service/package/product). Changing a phone number in site.config.ts updates every single link across the entire site automatically.
+
+**Languages**
+TypeScript, CSS
+
+**Runtime & Framework**
+React 18, React DOM
+
+**Build Tool**
+Vite
+
+**Routing**
+React Router v6
+
+**Styling**
+Tailwind CSS, PostCSS, Autoprefixer
+
+**Forms & Validation**
+React Hook Form, Zod, @hookform/resolvers
+
+**Icons**
+Lucide React
+
+**Fonts**
+Google Fonts (Cormorant Garamond, DM Sans)
+
+**Deployment**
+Vercel

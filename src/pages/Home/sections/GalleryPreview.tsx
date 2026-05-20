@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'
-import { FEATURED_GALLERY, GALLERY_IMAGES } from '../../../data/gallery.data'
-import { GalleryGrid } from '../../../components/organisms/GalleryGrid'
-import { GalleryLightbox } from '../../../components/organisms/GalleryLightbox'
-import { SectionHeader } from '../../../components/atoms/SectionHeader'
-import { ScrollReveal } from '../../../components/atoms/ScrollReveal'
-import { useLightbox } from '../../../hooks/useLightbox'
-import { ROUTES } from '../../../config/routes'
+import { Link } from "react-router-dom";
+import { FEATURED_GALLERY, GALLERY_IMAGES } from "../../../data/gallery.data";
+import { GalleryGrid } from "../../../components/organisms/GalleryGrid";
+import { GalleryLightbox } from "../../../components/organisms/GalleryLightbox";
+import { SectionHeader } from "../../../components/atoms/SectionHeader";
+import { ScrollReveal } from "../../../components/atoms/ScrollReveal";
+import { useLightbox } from "../../../hooks/useLightbox";
+import { ROUTES } from "../../../config/routes";
 
 export function GalleryPreview() {
   const { isOpen, selectedIndex, selectedImage, open, close, next, prev } =
-    useLightbox(GALLERY_IMAGES)
+    useLightbox(GALLERY_IMAGES);
 
   return (
     <section id="gallery-preview" className="section-padding bg-bg-base">
@@ -23,10 +23,7 @@ export function GalleryPreview() {
           />
         </ScrollReveal>
 
-        <GalleryGrid
-          images={FEATURED_GALLERY}
-          onImageClick={open}
-        />
+        <GalleryGrid images={FEATURED_GALLERY} onImageClick={open} />
 
         <ScrollReveal className="text-center mt-10">
           <Link
@@ -54,5 +51,5 @@ export function GalleryPreview() {
         totalCount={GALLERY_IMAGES.length}
       />
     </section>
-  )
+  );
 }

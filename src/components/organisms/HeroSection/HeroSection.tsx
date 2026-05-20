@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
-import { WhatsAppCTA } from '../../molecules/WhatsAppCTA'
-import { SITE_CONFIG } from '../../../config/site.config'
-import { ROUTES } from '../../../config/routes'
+import { Link } from "react-router-dom";
+import { WhatsAppCTA } from "../../molecules/WhatsAppCTA";
+import { SITE_CONFIG } from "../../../config/site.config";
+import { ROUTES } from "../../../config/routes";
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&q=85'
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&q=85";
 
 export function HeroSection() {
   return (
@@ -32,10 +33,39 @@ export function HeroSection() {
         aria-hidden="true"
       >
         <svg width="400" height="400" viewBox="0 0 400 400" fill="none">
-          <ellipse cx="200" cy="200" rx="180" ry="120" stroke="currentColor" strokeWidth="1" className="text-gold-primary" />
-          <ellipse cx="200" cy="200" rx="140" ry="85" stroke="currentColor" strokeWidth="0.5" className="text-gold-primary" />
-          <circle cx="200" cy="200" r="40" stroke="currentColor" strokeWidth="0.5" className="text-gold-primary" />
-          <path d="M200 80 Q240 140 200 200 Q160 140 200 80Z" stroke="currentColor" strokeWidth="0.5" fill="none" className="text-gold-primary" />
+          <ellipse
+            cx="200"
+            cy="200"
+            rx="180"
+            ry="120"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gold-primary"
+          />
+          <ellipse
+            cx="200"
+            cy="200"
+            rx="140"
+            ry="85"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            className="text-gold-primary"
+          />
+          <circle
+            cx="200"
+            cy="200"
+            r="40"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            className="text-gold-primary"
+          />
+          <path
+            d="M200 80 Q240 140 200 200 Q160 140 200 80Z"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            fill="none"
+            className="text-gold-primary"
+          />
         </svg>
       </div>
 
@@ -48,8 +78,13 @@ export function HeroSection() {
           </p>
 
           {/* Wordmark */}
-          <h1 className="hero-wordmark font-display font-light text-text-primary leading-none mb-4"
-              style={{ fontSize: 'clamp(4rem, 10vw, 7rem)', letterSpacing: '0.12em' }}>
+          <h1
+            className="hero-wordmark font-display font-light text-text-primary leading-none mb-4"
+            style={{
+              fontSize: "clamp(4rem, 10vw, 7rem)",
+              letterSpacing: "0.12em",
+            }}
+          >
             {SITE_CONFIG.brand.name}
           </h1>
 
@@ -63,16 +98,13 @@ export function HeroSection() {
 
           {/* Brand statement */}
           <p className="hero-statement font-body text-text-secondary text-base md:text-lg leading-relaxed mb-10 max-w-lg">
-            Handcrafted mehndi artistry for your most meaningful moments — bridal ceremonies, festive celebrations, and everything in between.
+            Handcrafted mehndi artistry for your most meaningful moments —
+            bridal ceremonies, festive celebrations, and everything in between.
           </p>
 
           {/* CTAs */}
           <div className="hero-cta flex flex-col sm:flex-row gap-3">
-            <WhatsAppCTA
-              label="Book via WhatsApp"
-              size="lg"
-              pulse
-            />
+            <WhatsAppCTA label="Book via WhatsApp" size="lg" pulse />
             <Link
               to={ROUTES.GALLERY}
               className="
@@ -95,5 +127,5 @@ export function HeroSection() {
         <div className="w-px h-10 bg-gold-muted" />
       </div>
     </section>
-  )
+  );
 }
